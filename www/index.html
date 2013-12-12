@@ -102,7 +102,7 @@ console.log(entry.fullPath + "/example/site/index.html");
        //     zip.extract(fileName, '/sdcard/', win, fail);
       //  }
         function getTempDir(dirName) {
-            zip.getTempDir(dirName, win, fail);
+            zip.getTempDir(url, win, fail);
         }
         function win(status) {
             alert('Message: ' + status);
