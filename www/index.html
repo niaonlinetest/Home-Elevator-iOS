@@ -14,10 +14,8 @@
      function onBodyLoad() {
 
   document.addEventListener("deviceready", onDeviceReady, false);
-
        
- //window.zip = cordova.require('cordova.plugin.ExtractZip.ExtractZip');
-
+  //window.zip = cordova.require('cordova.plugin.ExtractZip.ExtractZip');
   // create dir------ ------------------------------------------------------
 
   window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, null);
@@ -28,6 +26,8 @@
       create: true,
       exclusive: false
     }, onGetDirectorySuccess, onGetDirectoryFail);
+   
+    console.log(entry.fullPath + "/example/site/index.html");
     // index link--------------
     var mySiteUrl = entry.fullPath + "/example/site/index.html"
     var mySiteUrl2 = entry.fullPath + "/example/site/phone-call-active-128.png"
@@ -35,12 +35,12 @@
     var divOpen2 = document.getElementById("open2");
     divOpen.setAttribute("src", mySiteUrl);
     divOpen2.setAttribute("src", mySiteUrl2);
-console.log(entry.fullPath + "/example/site/index.html");
-console.log("uper hai url");
+    console.log(entry.fullPath + "/example/site/index.html");
+    console.log("uper hai url");
   }
 
   function onGetDirectorySuccess(dir) {
-    console.log("Created dir " + dir.name);
+  console.log("Created dir " + dir.name);
   }
 
   function onGetDirectoryFail(error) {
