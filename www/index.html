@@ -33,7 +33,7 @@
     var mySiteUrl2 = entry.fullPath + "/example/site/phone-call-active-128.png"
     var divOpen = document.getElementById("open");
     var divOpen2 = document.getElementById("open2");
-    divOpen.setAttribute("href", mySiteUrl);
+    divOpen.setAttribute("src", mySiteUrl);
     divOpen2.setAttribute("src", mySiteUrl2);
 console.log(entry.fullPath + "/example/site/index.html");
   }
@@ -154,6 +154,15 @@ console.log(entry.fullPath + "/example/site/index.html");
 </div>
 </div>
 
+<br><br>
+
+<iframe src="example/site/index.html" width="400" height="400"  frameborder="0"></iframe>
+
+<br><br>
+frame 2
+<br><br>
+
+<iframe src="example/site/index.html" id="open" width="400" height="400"  frameborder="0"></iframe>
      <!--  <span id="ready">
       </span>
       <a href="#" id="open" style="display: none;">open</a>
