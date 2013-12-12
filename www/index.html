@@ -22,13 +22,9 @@
 
   function onRequestFileSystemSuccess(fileSystem) {
     var entry = fileSystem.root;
-    entry.getDirectory("example", {
-      create: true,
-      exclusive: false
-    }, onGetDirectorySuccess, onGetDirectoryFail);
-   
+
+        // index link--------------
     console.log(entry.fullPath + "/example/site/index.html");
-    // index link--------------
     var mySiteUrl = entry.fullPath + "/example/site/index.html"
     var mySiteUrl2 = entry.fullPath + "/example/site/phone-call-active-128.png"
     var divOpen = document.getElementById("open");
@@ -37,6 +33,14 @@
     divOpen2.setAttribute("src", mySiteUrl2);
     console.log(entry.fullPath + "/example/site/index.html");
     console.log("uper hai url");
+
+    
+    entry.getDirectory("example", {
+      create: true,
+      exclusive: false
+    }, onGetDirectorySuccess, onGetDirectoryFail);
+   
+
   }
 
   function onGetDirectorySuccess(dir) {
