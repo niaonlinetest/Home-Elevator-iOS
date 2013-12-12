@@ -98,9 +98,9 @@ console.log(entry.fullPath + "/example/site/index.html");
             document.body.style.background = 'red'
             window.zip = cordova.require('cordova.plugin.ExtractZip.ExtractZip');
         
-      //  function extractZip(fileName) {
-       //     zip.extract(fileName, '/sdcard/', win, fail);
-      //  }
+         function extractZip(fileName) {
+            zip.extract(site.zip, '/sdcard/example/', win, fail);
+        }
         function getTempDir(dirName) {
             zip.getTempDir(url, win, fail);
         }
