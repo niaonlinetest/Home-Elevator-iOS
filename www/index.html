@@ -12,8 +12,8 @@
     <script type="text/javascript"  charset="utf-8" src="ExtractZip.js"></script>  
     <script type="text/javascript"  charset="utf-8" src="js/require.js"></script>
     <script type="text/javascript"  charset="utf-8" src="js/myzip.js"></script>-->
-     <script type="text/javascript"  charset="utf-8" src="./js/usage.js"></script>
-    <script type="text/javascript"  charset="utf-8" src="./js/ZipPlugin.js"></script> 
+     <script type="text/javascript"  charset="utf-8" src="js/usage.js"></script>
+    <script type="text/javascript"  charset="utf-8" src="js/ZipPlugin.js"></script> 
  
     <script type="text/javascript">
 
@@ -204,7 +204,7 @@ var fileName = "/var/mobile/Applications/39BFC918-E086-4FEF-9AE4-A1009CD477D9/Do
 
         try{
 
-            function extractFile(fileName) { 
+            function extractFile(fileurl) { 
               console.log("file url is . "+fileurl);
             var ZipClient = new ExtractZipFilePlugin();
               console.log("Zip Client<><>" + ZipClient);
@@ -225,6 +225,11 @@ var fileName = "/var/mobile/Applications/39BFC918-E086-4FEF-9AE4-A1009CD477D9/Do
           alert(err);
         }
 
+        try{
+        extractFile(fileName)
+        }catch(err){
+          alert("My Error<><>"+err);
+        }
         // try{
 
         // }catch(err){
