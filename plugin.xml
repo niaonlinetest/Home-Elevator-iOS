@@ -56,3 +56,5 @@
      </platform>
           
 </plugin> 
+
+<plugin name="ZipPlugin" value="com.phonegap.plugin.ExtractZipFile.ExtractZipFilePlugin" />
