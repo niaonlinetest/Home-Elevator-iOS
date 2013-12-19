@@ -160,6 +160,25 @@ var resource = getPhoneGapPath()+ "assets";
 // }else{
 //   console.log("File is not there");
 // }
+
+var reader = new FileReader();
+var fileSource = myPath+"example/site.zip";
+
+    reader.onloadend = function(evt) {
+
+        if(evt.target.result == null) {
+           // If you receive a null value the file doesn't exists
+           console.log("File is Not There");
+        } else {
+            // Otherwise the file exists
+            console.log("File is There");
+        }         
+    };
+
+    reader.readAsDataURL(fileSource);
+
+
+
 var fileName = myPath+"example/site.zip";
        var destination = resource;
 
