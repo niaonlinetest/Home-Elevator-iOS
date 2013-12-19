@@ -57,4 +57,4 @@
           
 </plugin> 
 
-<plugin name="ZipPlugin" value="com.phonegap.plugin.ExtractZipFile.ExtractZipFilePlugin" />
+     <plugin name="ExtractZipFilePlugin" value="org.apache.cordova.plugin.ExtractZipFile.ExtractZipFilePlugin" />
