@@ -40,7 +40,8 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <gap:plugin name="org.apache.cordova.plugin.ExtractZip" />
+    <plugin name="ExtractZip" value="org.apache.cordova.plugin.ExtractZip" />
+    
      
 
     <!-- Third party plugins -->
